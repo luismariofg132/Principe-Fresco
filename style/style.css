@@ -75,10 +75,6 @@ section{
   font-size: 3rem;
 }
 
-
-
-
-
 .logo i{
   padding-right: .5rem;
   color:var(--green);
@@ -543,21 +539,6 @@ section{
 .footer .credit span{
   color:var(--green);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* media queries  */
 
