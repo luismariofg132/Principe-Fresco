@@ -42,14 +42,6 @@
         },
         {
             "id": 6,
-            "nombre": "Outfit 6",
-            "precio": 10.50,
-            "precioInicial": 13.20,
-            "descuento": "-33%",
-            "image": ""
-        },
-        {
-            "id": 6,
             "nombre": "H/M",
             "precio": 10.50,
             "precioInicial": 13.20,
