@@ -24,7 +24,7 @@ const showProduts = (produts) => {
                 </div>
                 <img src="${image}"
                     alt="">
-                <h3>${nombre}</h3>
+                <h3 id="${id}">${nombre}</h3>
                 <div class="stars">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
