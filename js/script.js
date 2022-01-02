@@ -1,13 +1,10 @@
-const API_PRODUTS = "https://luismariofg132.github.io/Principe-Fresco/data/dbProductos.json"
+const API_PRODUTS = "http://localhost:4000/produts"
 const box_container = document.getElementById('box-container')
 
-
-const getProduts = (produts) => {
-    const peticion = fetch(produts);
-    peticion
-        .then((resp) => resp.json())
-        .then((data) => showProduts(data.produts))
-        .catch(err => console.log(err))
+const getProduts = async (produts) => {
+    const busq = await fetch(produts);
+    const data = await busq.json()
+    showProduts(data);
 }
 
 getProduts(API_PRODUTS);
