@@ -1,5 +1,9 @@
 const API_PRODUTS = "http://localhost:4000/produts"
+const API_PRODUTS_EDIT = "http://localhost:4000/produts/"
 const box_container = document.getElementById('box-container')
+let car = JSON.parse(localStorage.getItem('car')) || []
+
+
 
 const getProduts = async (produts) => {
     const busq = await fetch(produts);
@@ -24,7 +28,7 @@ const showProduts = (produts) => {
                 </div>
                 <img src="${image}"
                     alt="">
-                <h3 id="${id}">${nombre}</h3>
+                <h3>${nombre}</h3>
                 <div class="stars">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -33,9 +37,30 @@ const showProduts = (produts) => {
                     <i class="fas fa-star-half-alt"></i>
                 </div>
                 <div class="price"> ${precio} <span> ${precioInicial} </span> </div>
-                <a href="#" class="btn">add to cart</a>
+                <a href="#" class="btn" id="${id}" onclick="Agregar(${id})">Añadir al carrito</a>
         `
         box_container.appendChild(box)
 
     });
 }
+
+const Agregar = async (idP) => {
+    let addProduct = await fetch(API_PRODUTS_EDIT)
+    let dataProdut = await addProduct.json();
+
+    searchProduct = dataProdut.find(product => product.id == idP)
+    const { id, nombre, precio, precioInicial, descuento, image } = searchProduct
+
+    const carProduct = {
+        id: id,
+        nombre: nombre,
+        precio: precio,
+        image: image,
+        cantidad: 1,
+    }
+
+    car.unshift(carProduct)
+    localStorage.setItem('car', JSON.stringify(car));
+    getLocalstorage();
+}
+
