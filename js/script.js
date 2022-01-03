@@ -3,8 +3,6 @@ const API_PRODUTS_EDIT = "http://localhost:4000/produts/"
 const box_container = document.getElementById('box-container')
 let car = JSON.parse(localStorage.getItem('car')) || []
 
-
-
 const getProduts = async (produts) => {
     const busq = await fetch(produts);
     const data = await busq.json()
