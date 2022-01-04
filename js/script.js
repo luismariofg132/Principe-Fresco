@@ -59,6 +59,6 @@ const Agregar = async (idP) => {
 
     car.unshift(carProduct)
     localStorage.setItem('car', JSON.stringify(car));
-    getLocalstorage();
+    getLocalstorage()
 }
 
