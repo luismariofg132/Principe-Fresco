@@ -53,4 +53,8 @@ formPay.addEventListener('submit', (e) => {
         ExpirationDate: expirationDate,
         SecurityCode: securityCode
     }
+
+    localStorage.setItem('PayDate', JSON.stringify(lastPaymentData))
+    localStorage.removeItem('car')
+    window.location.reload();
 })
