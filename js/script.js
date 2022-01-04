@@ -1,5 +1,5 @@
-const API_PRODUTS = "http://localhost:4000/produts"
-const API_PRODUTS_EDIT = "http://localhost:4000/produts/"
+const API_PRODUTS = "https://glacial-savannah-89462.herokuapp.com/produts"
+const API_PRODUTS_EDIT = "https://glacial-savannah-89462.herokuapp.com/produts/"
 const box_container = document.getElementById('box-container')
 let car = JSON.parse(localStorage.getItem('car')) || []
 

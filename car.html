@@ -59,6 +59,29 @@
 
         </div>
 
+        <div id="total-pay"></div>
+    </section>
+
+    <section id="form-pay">
+        <form action="form-pay-product">
+            <div>
+                <label for="number-card">Numero de la tarjeta</label>
+                <input type="number" id="number-card" name="number-card">
+            </div>
+            <div>
+                <label for="full-name">Nombre Completo</label>
+                <input type="text" name="full-name" id="full-name">
+            </div>
+            <div>
+                <label for="expiration-date">Fecha de expiración</label>
+                <input type="text" name="expiration-date" id="expiration-date">
+            </div>
+            <div>
+                <label for="security-code">Codigo de seguridad</label>
+                <input type="number" name="security-code" id="security-code">
+            </div>
+            <button type="submit">Pagar</button>
+        </form>
     </section>
     <script src="js/car.js"></script>
 </body>

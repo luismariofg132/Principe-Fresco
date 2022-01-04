@@ -1,5 +1,5 @@
-const API_PRODUTS = "http://localhost:4000/produts"
-const API_PRODUTS_EDIT = "http://localhost:4000/produts/"
+const API_PRODUTS = "https://glacial-savannah-89462.herokuapp.com/produts"
+const API_PRODUTS_EDIT = "https://glacial-savannah-89462.herokuapp.com/produts/"
 const result = document.getElementById('box-container');
 const bntSearch = document.getElementById('bntSearch');
 const divEdit = document.getElementById('edit');
@@ -71,6 +71,8 @@ bntAdd.addEventListener('click', async (e) => {
             "Content-Type": "application/json; charset=UTF-8"
         }
     })
+
+    window.location
 })
 
 // Editar

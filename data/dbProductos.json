@@ -55,14 +55,6 @@
       "precioInicial": 13.2,
       "descuento": "-33%",
       "image": "https://res.cloudinary.com/ddgyxfetd/image/upload/v1640881044/WorkShop1/2x1.jpg"
-    },
-    {
-      "id": 8,
-      "nombre": "Merry Chrismas",
-      "precio": 10.5,
-      "precioInicial": 13.2,
-      "descuento": "-33%",
-      "image": "https://res.cloudinary.com/ddgyxfetd/image/upload/v1640881076/WorkShop1/merry%20chrismas.jpg"
     }
   ]
 }
