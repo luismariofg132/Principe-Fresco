@@ -72,7 +72,7 @@ bntAdd.addEventListener('click', async (e) => {
         }
     })
 
-    window.location
+    window.location.reload();
 })
 
 // Editar
@@ -100,6 +100,7 @@ const edit = async () => {
     })
     let data = resp.json()
     console.log(data)
+    window.location.reload();
 }
 
 // Eliminar
@@ -109,4 +110,5 @@ const Delete = async () => {
     let resp = await fetch(API_PRODUTS_EDIT + idProduct, {
         method: 'DELETE'
     })
+    window.location.reload();
 }
