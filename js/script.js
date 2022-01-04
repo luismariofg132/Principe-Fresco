@@ -24,8 +24,7 @@ const showProduts = (produts) => {
                     <a href="#" class="fas fa-share"></a>
                     <a href="#" class="fas fa-eye"></a>
                 </div>
-                <img src="${image}"
-                    alt="">
+                <img src="${image}" alt="">
                 <h3>${nombre}</h3>
                 <div class="stars">
                     <i class="fas fa-star"></i>

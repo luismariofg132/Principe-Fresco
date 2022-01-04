@@ -22,30 +22,19 @@ bntSearch.addEventListener('click', async (e) => {
 
     let buscar = data.find(product => product.nombre == search)
     const { id, nombre, precio, precioInicial, descuento, image } = buscar
-
-    result.innerHTML = "";
-    result.innerHTML += `
+    const box = document.createElement('div')
+    box.classList.add('box');
+    box.innerHTML = "";
+    box.innerHTML += `
     <span class="discount">${descuento}</span>
-        <div class="icons">
-            <a href="#" class="fas fa-heart"></a>
-            <a href="#" class="fas fa-share"></a>
-            <a href="#" class="fas fa-eye"></a>
-        </div>
         <img src="${image}" alt="">
         <h3>${nombre}</h3>
-        <div class="stars">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star-half-alt"></i>
-        </div>
-        <div class="price"> ${precio} <span> ${precioInicial} </span> </div>
-
-        <button onclick="Delete()">Eliminar</button>
-        <button onclick="edit()">Editar</button>
+        <div class="price">Precio: ${precio} <span>Precio Inicial: ${precioInicial} </span> </div>
+        <button class="btn" onclick="Delete()">Eliminar</button>
+        <button class="btn" onclick="edit()">Editar</button>
     `
     idProduct.value = id
+    result.appendChild(box)
 })
 
 // Agregar

@@ -44,6 +44,7 @@
                 <a href="car.html" class="fas fa-shopping-cart"></a>
                 <a href="#" class="fas fa-heart"></a>
                 <a href="#" class="fas fa-user-circle"></a>
+                <a href="control.html" class="fas fa-plus"></a>
             </div>
 
         </div>
@@ -53,7 +54,7 @@
     <!-- header section ends -->
     <section class="product" id="product">
 
-        <h1 class="heading">Carrito de compras</h1>
+        <h1 class="heading">Carrito de compras <i class="fas fa-truck"></i></h1>
 
         <div class="box-container" id="box-container">
 
@@ -63,7 +64,7 @@
     </section>
 
     <section id="form-pay">
-        <form action="form-pay-product">
+        <form action="form-pay-product" id="formPay">
             <div>
                 <label for="number-card">Numero de la tarjeta</label>
                 <input type="number" id="number-card" name="number-card">
@@ -80,7 +81,7 @@
                 <label for="security-code">Codigo de seguridad</label>
                 <input type="number" name="security-code" id="security-code">
             </div>
-            <button type="submit">Pagar</button>
+            <button class="btn">Pagar <i class="fas fa-money-bill-wave-alt"></i></button>
         </form>
     </section>
     <script src="js/car.js"></script>
