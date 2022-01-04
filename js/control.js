@@ -61,7 +61,7 @@ bntAdd.addEventListener('click', async (e) => {
         }
     })
 
-    window.location.reload();
+    Alerta()
 })
 
 // Editar
@@ -89,7 +89,8 @@ const edit = async () => {
     })
     let data = resp.json()
     console.log(data)
-    window.location.reload();
+
+    Alerta()
 }
 
 // Eliminar
@@ -99,5 +100,18 @@ const Delete = async () => {
     let resp = await fetch(API_PRODUTS_EDIT + idProduct, {
         method: 'DELETE'
     })
-    window.location.reload();
+
+    Alerta()
+}
+
+// Alerta 
+const Alerta = () => {
+    Swal.fire({
+        title: 'Cambios Realizados',
+        confirmButtonColor: '#ae896f'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            window.location.reload()
+        }
+    })
 }

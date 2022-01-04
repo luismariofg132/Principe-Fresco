@@ -56,5 +56,12 @@ formPay.addEventListener('submit', (e) => {
 
     localStorage.setItem('PayDate', JSON.stringify(lastPaymentData))
     localStorage.removeItem('car')
-    window.location.reload();
+    Swal.fire({
+        title: 'Pago Recibido, Gracias por usar nuestro Servicio',
+        confirmButtonColor: '#ae896f'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            window.location.reload()
+        }
+    })
 })
