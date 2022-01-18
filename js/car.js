@@ -56,6 +56,8 @@ formPay.addEventListener('submit', (e) => {
 
     localStorage.setItem('PayDate', JSON.stringify(lastPaymentData))
     localStorage.removeItem('car')
+
+    // alerta de pago recibido
     Swal.fire({
         title: 'Pago Recibido, Gracias por usar nuestro Servicio',
         confirmButtonColor: '#ae896f'

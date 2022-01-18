@@ -3,6 +3,7 @@ const API_PRODUTS_EDIT = "https://glacial-savannah-89462.herokuapp.com/produts/"
 const box_container = document.getElementById('box-container')
 let car = JSON.parse(localStorage.getItem('car')) || []
 
+// Peticion a la api
 const getProduts = async (produts) => {
     const busq = await fetch(produts);
     const data = await busq.json()
@@ -11,6 +12,7 @@ const getProduts = async (produts) => {
 
 getProduts(API_PRODUTS);
 
+// Mostrar los poductos en el html
 const showProduts = (produts) => {
     box_container.innerHTML = ''
     produts.forEach(element => {
@@ -41,6 +43,7 @@ const showProduts = (produts) => {
     });
 }
 
+// agrega un producto al carrito
 const Agregar = async (idP) => {
     let addProduct = await fetch(API_PRODUTS_EDIT)
     let dataProdut = await addProduct.json();
@@ -59,6 +62,7 @@ const Agregar = async (idP) => {
     car.unshift(carProduct)
     localStorage.setItem('car', JSON.stringify(car));
 
+    // alerta
     const Toast = Swal.mixin({
         toast: true,
         position: 'top-end',
