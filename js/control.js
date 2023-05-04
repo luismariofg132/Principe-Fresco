@@ -1,5 +1,5 @@
-const API_PRODUTS = "https://glacial-savannah-89462.herokuapp.com/produts"
-const API_PRODUTS_EDIT = "https://glacial-savannah-89462.herokuapp.com/produts/"
+const API_PRODUTS = "https://apipf.lfrancodev.com/produts"
+const API_PRODUTS_EDIT = "https://apipf.lfrancodev.com/produts/"
 const result = document.getElementById('box-container');
 const bntSearch = document.getElementById('bntSearch');
 const divEdit = document.getElementById('edit');
